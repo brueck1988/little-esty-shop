@@ -10,7 +10,7 @@ RSpec.describe Customer, type: :model do
     it { should validate_presence_of :last_name }
   end
 
-before(:each) do
+ before(:each) do
   @customer_1 = FactoryBot.create(:customer)
   @customer_2 = FactoryBot.create(:customer)
   @customer_3 = FactoryBot.create(:customer)
@@ -55,7 +55,7 @@ before(:each) do
 
   @transaction_15 = FactoryBot.create(:transaction, result: 1)
   @invoice_5.transactions << [@transaction_15]
-end
+ end
 
   describe 'class methods' do
     describe '::top_5_by_transaction_count' do
